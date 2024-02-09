@@ -74,3 +74,31 @@
 }
 
 /* CSS Transform */
+.transform .box{
+	transition: all 1s ease-out;
+}
+
+.transform .b1:hover{
+	transform: translate(20px, -25px);
+}
+
+.transform .b2:hover{
+	transform: scale(1.4);
+}
+
+.transform .b3{
+	transform-origin: right top;
+}
+
+.transform .b3:hover{
+	transform: rotate(45deg);
+	/* transform-origin: right top; */
+}
+
+.transform .b4{
+	transform: skewX(45deg) skewY(30deg);
+}
+
+.transform .b4:hover{
+	transform: skewX(0) skewY(0);
+}
