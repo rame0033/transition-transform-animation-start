@@ -102,3 +102,86 @@
 .transform .b4:hover{
 	transform: skewX(0) skewY(0);
 }
+
+/* CSS Animation */
+
+@keyframes changeColor {
+	from{
+		background-color: #cc00cc;
+	}
+
+	to{
+		background-color: #E89380;
+	}
+}
+
+.animation .b1{
+	animation-name: changeColor;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveAround{
+	0%{
+		transform: translate(0,0);
+	}
+
+	25%{
+		transform: translate(200px,0);
+	}
+
+	50%{
+		transform: translate(200px,200px);
+	}
+
+	75%{
+		transform: translate(0px,200px);
+	}
+
+	100%{
+		transform: translate(0,0);
+	}
+	/* This value will create an animation of clockwise movement */
+}
+
+.animation .b2{
+	animation: moveAround 2s;	
+	animation-delay: 1s;
+	animation-iteration-count: 3;
+}
+
+@keyframes transformeMe{
+	0%{
+		transform: scale(0.5) rotateX(0) translateX(0);
+	}
+
+	100%{
+		transform: scale(1) rotateX(180deg) translateX(600px)
+	}
+}
+
+.animation .b3{
+	/* This will be the shorthand property > name, duration, timing function, delay, count, direction, fill */
+	animation: transformeMe 1.5s ease-out 2s 12 alternate forwards;
+}
+
+.animation .b3:hover{
+	animation-play-state: paused;
+}
+
+@keyframes r4ndom{
+	0%{
+		transform:rotate(0deg);
+		background-color: #9696ff;
+	}
+
+	100%{
+		transform: rotate(180deg);
+		background-color: #89cff0;
+	}
+}
+
+.animation .b4{
+	animation: r4ndom 1s ease-out 2s 2 forwards;
+}
